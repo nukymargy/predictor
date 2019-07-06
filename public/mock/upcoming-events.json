@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "name": "Premier League",
+        "events": [
+            {
+                "id": 1,
+                "teams": [
+                    {
+                        "id": 1,
+                        "name": "Manchester United"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Arsenal"
+                    }
+                ],
+                "status": "prematch",
+                "score": [
+                    3,
+                    1
+                ],
+                "prediction": null
+            },
+            {
+                "id": 5,
+                "teams": [
+                    {
+                        "name": "Liverpool",
+                        "id": 5
+                    },
+                    {
+                        "name": "Manchester City",
+                        "id": 6
+                    }
+                ],
+                "status": "finished",
+                "score": [4, 1],
+                "prediction": null
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "la liga",
+        "events": [
+            {
+                "id": 2,
+                "teams": [
+                    {
+                        "id": 3,
+                        "name": "Barcelona"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Real Madrid"
+                    }
+                ],
+                "status": "live",
+                "score": [
+                    2,
+                    2
+                ],
+                "prediction": [
+                    3,
+                    1
+                ]
+            }
+        ]
+    }
+]
