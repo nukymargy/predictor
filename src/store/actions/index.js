@@ -44,16 +44,10 @@ export function receiveEvents(events) {
 
 export function fetchUpcomingEvents() {
     return async function (dispatch, getState) {
-        console.log('asd')
-
         dispatch(requestUpcomingEvents());
 
         const response = await axios.get('mock/upcoming-events.json');
-
-        // const upcomingEventsData = response.json();
-
         const { leagues, events, upcomingEvents } = extractEvents(response.data);
-        console.log(events);
 
         leagues.forEach(league => dispatch(receiveLeague(league)));
         events.forEach(event => dispatch(receiveEvent(event)));

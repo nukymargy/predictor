@@ -5,9 +5,11 @@ import { Event } from "./components/football/Event";
 import { Provider } from 'react-redux';
 import store from './store';
 
+import events from './events.json';
+import { League } from './components/League';
+
 const matchData = [
     {
-
         id: 2,
         matchDate: Date(),
         teams: [{
@@ -54,14 +56,26 @@ const matchData = [
     }
 ];
 
+const league1 = {
+    id: 1,
+    name: 'Premier League',
+    eventIds: [1, 2]
+};
+
+const league2 = {
+    id: 1,
+    name: 'la liga',
+    eventIds: [3, 4]
+};
+
+const leagues = [league1, league2];
+
 function App() {
     return (
         <Provider store={store}>
             <div>
                 <div className="container mt-5">
-                    <div className="row justify-content-around">
-                        {matchData.map(event => <Event event={event} />)}
-                    </div>
+                    <League {...league1} />
                 </div>
             </div>
         </Provider>
